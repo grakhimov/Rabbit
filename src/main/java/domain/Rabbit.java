@@ -1,14 +1,25 @@
-package entities;
+package domain;
 
 import support.Sex;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Entity
+@Table(name = "rabbits")
 public class Rabbit {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private int id;
-    private LocalDateTime birthdayDate;
+    @Column(name = "birthday")
+    private LocalDateTime birthday;
+    @Column(name = "sex")
     private Sex sex;
+    @Column(name = "vaccines")
+    //@OneToMany(targetEntity=Rabbit.class, mappedBy="vaccines", fetch=FetchType.EAGER)
+    @ElementCollection(targetClass=Vaccine.class)
     private List<Vaccine> vaccines;
 
     public int getId() {
@@ -19,12 +30,12 @@ public class Rabbit {
         this.id = id;
     }
 
-    public LocalDateTime getBirthdayDate() {
-        return birthdayDate;
+    public LocalDateTime getBirthday() {
+        return birthday;
     }
 
-    public void setBirthdayDate(LocalDateTime birthdayDate) {
-        this.birthdayDate = birthdayDate;
+    public void setBirthday(LocalDateTime birthday) {
+        this.birthday = birthday;
     }
 
     public Sex getSex() {

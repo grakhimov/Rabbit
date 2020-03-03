@@ -1,31 +1,28 @@
-package entities;
+package domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "cages")
-public class Cage {
+public class Cage implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private int id;
-    @Column(name = "posX")
+    private long id;
+    @Column(name = "pos_x")
     private int posX;
-    @Column(name = "posY")
+    @Column(name = "pos_y")
     private int posY;
-    @Column(name = "entity`")
-    private Object entity;
+    @Column(name = "entity")
+    private int entity;
 
-    public Cage(String s, String s1) {
-
-    }
-
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -45,11 +42,11 @@ public class Cage {
         this.posY = posY;
     }
 
-    public Object getEntity() {
+    public int getEntity() {
         return entity;
     }
 
-    public void setEntity(Object entity) {
+    public void setEntity(int entity) {
         this.entity = entity;
     }
 
