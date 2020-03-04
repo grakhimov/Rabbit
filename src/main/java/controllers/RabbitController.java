@@ -1,28 +1,28 @@
 package controllers;
 
-import domain.Cage;
+import domain.Rabbit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import repository.CageRepository;
+import repository.RabbitRepository;
 
 import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-public class CageController {
+public class RabbitController {
     @Autowired
-    private CageRepository cageRepository;
+    private RabbitRepository rabbitRepository;
 
-    @GetMapping("/cages")
-    public List<Cage> getCages() {
-        return cageRepository.findAll();
+    @GetMapping("/rabbits")
+    public List<Rabbit> getRabbits() {
+        return rabbitRepository.findAll();
     }
 
-    @PostMapping("/cages")
-    public Cage createCage(@Valid @RequestBody Cage cage) {
-        return cageRepository.save(cage);
+    @PostMapping("/rabbits")
+    public Rabbit createRabbit(@Valid @RequestBody Rabbit rabbit) {
+        return rabbitRepository.save(rabbit);
     }
 }

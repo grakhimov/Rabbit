@@ -11,22 +11,24 @@ public class Vaccine {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private int id;
-    private VaccineType vaccineType;
-    private Number quantity;
+    @Column(name = "vaccine_type")
+    private VaccineType vaccine_type;
+    @Column(name = "quantity")
+    private Double quantity;
 
-    public VaccineType getVaccineType() {
-        return vaccineType;
+    public VaccineType getVaccine_type() {
+        return vaccine_type;
     }
 
-    public void setVaccineType(VaccineType vaccineType) {
-        this.vaccineType = vaccineType;
+    public void setVaccine_type(VaccineType vaccine_type) {
+        this.vaccine_type = vaccine_type;
     }
 
-    public Number getQuantity() {
+    public Double getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Number quantity) {
+    public void setQuantity(Double quantity) {
         this.quantity = quantity;
     }
 

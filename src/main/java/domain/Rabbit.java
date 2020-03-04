@@ -18,7 +18,7 @@ public class Rabbit {
     @Column(name = "sex")
     private Sex sex;
     @Column(name = "vaccines")
-    //@OneToMany(targetEntity=Rabbit.class, mappedBy="vaccines", fetch=FetchType.EAGER)
+    @OneToMany(cascade = {CascadeType.ALL})
     @ElementCollection(targetClass=Vaccine.class)
     private List<Vaccine> vaccines;
 

@@ -12,9 +12,9 @@ public class Cage implements Serializable {
     @Column(name = "id")
     private long id;
     @Column(name = "pos_x")
-    private int posX;
+    private int pos_x;
     @Column(name = "pos_y")
-    private int posY;
+    private int pos_y;
     @Column(name = "entity")
     private int entity;
 
@@ -26,20 +26,20 @@ public class Cage implements Serializable {
         this.id = id;
     }
 
-    public int getPosX() {
-        return posX;
+    public int getPos_x() {
+        return pos_x;
     }
 
-    public void setPosX(int posX) {
-        this.posX = posX;
+    public void setPos_x(int pos_x) {
+        this.pos_x = pos_x;
     }
 
-    public int getPosY() {
-        return posY;
+    public int getPos_y() {
+        return pos_y;
     }
 
-    public void setPosY(int posY) {
-        this.posY = posY;
+    public void setPos_y(int pos_y) {
+        this.pos_y = pos_y;
     }
 
     public int getEntity() {
@@ -57,8 +57,8 @@ public class Cage implements Serializable {
     public String toString() {
         return "Cage{" +
                 "id=" + id +
-                ", posX=" + posX +
-                ", posY=" + posY +
+                ", posX=" + pos_x +
+                ", posY=" + pos_y +
                 ", entity=" + entity +
                 '}';
     }
