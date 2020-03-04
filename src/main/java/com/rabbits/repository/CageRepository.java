@@ -1,6 +1,6 @@
-package repository;
+package com.rabbits.repository;
 
-import domain.Cage;
+import com.rabbits.domain.Cage;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,12 +1,12 @@
-package controllers;
+package com.rabbits.controllers;
 
-import domain.Rabbit;
+import com.rabbits.domain.Rabbit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import repository.RabbitRepository;
+import com.rabbits.repository.RabbitRepository;
 
 import javax.validation.Valid;
 import java.util.List;

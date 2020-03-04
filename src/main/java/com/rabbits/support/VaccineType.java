@@ -1,4 +1,4 @@
-package support;
+package com.rabbits.support;
 
 public enum VaccineType {
     VGDR, MYXOMATOSIS

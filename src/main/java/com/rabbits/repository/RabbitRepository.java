@@ -1,6 +1,6 @@
-package repository;
+package com.rabbits.repository;
 
-import domain.Rabbit;
+import com.rabbits.domain.Rabbit;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

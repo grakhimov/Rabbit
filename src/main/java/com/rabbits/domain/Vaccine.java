@@ -1,6 +1,6 @@
-package domain;
+package com.rabbits.domain;
 
-import support.VaccineType;
+import com.rabbits.support.VaccineType;
 
 import javax.persistence.*;
 

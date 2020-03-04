@@ -1,6 +1,6 @@
-package domain;
+package com.rabbits.domain;
 
-import support.Sex;
+import com.rabbits.support.Sex;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

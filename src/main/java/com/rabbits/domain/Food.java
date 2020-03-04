@@ -1,6 +1,6 @@
-package domain;
+package com.rabbits.domain;
 
-import support.FoodType;
+import com.rabbits.support.FoodType;
 
 public class Food {
     private FoodType foodType;
