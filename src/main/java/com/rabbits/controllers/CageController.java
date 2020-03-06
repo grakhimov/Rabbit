@@ -1,6 +1,7 @@
 package com.rabbits.controllers;
 
 import com.rabbits.domain.Cage;
+import com.rabbits.exceptions.CageNotFoundException;
 import com.rabbits.repository.CageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +28,8 @@ public class CageController {
 
     @PutMapping("/cages/{cageId}")
     public ResponseEntity<Cage> updateCage(@PathVariable long cageId, @Valid @RequestBody Cage cage) {
-        Cage c = cageRepository.findById(cageId).orElseThrow(() -> new IllegalArgumentException(String.format("There's no cage with %s id", cageId)));
+        Cage c = cageRepository.findById(cageId).orElseThrow(() ->
+                new CageNotFoundException(cageId));
         c.setEntity(cage.getEntity());
         c.setPos_x(cage.getPos_x());
         c.setPos_y(cage.getPos_y());
